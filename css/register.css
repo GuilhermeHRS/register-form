@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins//Poppins-Regular.ttf);
+}
+
+
+* {
+    font-family: "Poppins";
+}
+
+input {
+    display: block;
+}
+
+#content {
+    background: linear-gradient(135deg, rgb(43, 102, 161) 14%, rgb(141, 161, 218) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 175vh;
+}
+
+.container-card {
+    background: #fff;
+    border-radius: 12px 12px 12px 12px; ;
+    max-width: 100vh;
+    width: 100%;
+    min-height: 500px;
+    box-shadow: 0px 2px 23px #00000030;   
+    padding: 40px 60px;
+}
+
+.container-card h1 {
+    background-image: linear-gradient(to right, rgb(22, 13, 32), rgb(49, 92, 128), rgb(64, 192, 224));
+    color: black;
+    background-clip: text;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    -webkit-background-clip: text;
+    /* Adicionado: */
+    -webkit-text-fill-color: transparent;
+}
+
+form span {
+    margin-left: 30px;
+    font-size: 1.3rem;
+    font-family: poppins;
+    font-weight: 700;
+
+    background-image: linear-gradient(to right, rgb(22, 13, 32), rgb(49, 92, 128));
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+    /* Adicionado: */
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.row{
+    border-bottom: 1.5px solid #919191;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    margin: 8px 0;
+}
+
+.register-form {
+    margin: 5px;
+}
+
+#name-label{
+    display: inline-block;
+}
+
+
+.container-label {
+    align-items: center;
+    margin: 7px 0;
+}
+
+.container-label input[type="text"], .container-label input[type="password"], .container-label input[type="email"]{
+    padding: 8px 5px;
+    border-radius: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 0.5px #c1c1c1 ;
+    font-size: 0.8rem;
+    background-color: #ebf8ff;
+}
+
+.container-label label {
+    padding-left: 3px;
+}
+
+.sub-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.sub-title #fn, .sub-title #ln {
+    box-sizing: border-box;
+    width: 49%;
+}
+
+#fn {
+    margin-right: 10px; 
+}
+
+.title {
+    margin-top: 30px;
+}
+
+.container-label #phone2 {
+    font-size: 0.8rem;
+    margin: 0 0 0 2px; 
+    color: #888888;
+    font-weight: 100;
+}
+
+#fn input[name="cep"]{
+    width: 20vh;
+}
+
+
+
+#register{
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+#register input {
+    font-size: 18px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgb(161, 157, 157);
+    border-radius: 6px;
+    padding: 0;
+    margin: 15px 0 20px 0;
+    background: linear-gradient(to left, #4776e6, #063986);
+    color: #fff;
+    transition: all 0.3s ease
+}
+
+#register input:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,  #4776e6, #063986);
+}
+
+#register input a{
+    text-decoration: none;
+    color: #fff;
+}

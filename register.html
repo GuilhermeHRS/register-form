@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/_reset.css">
+    <link rel="stylesheet" href="./css/register.css">
+
+    <title>Register form</title>
+    <script src="./js/register.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div class="container-card">
+
+            <h1>Register form</h1>
+
+            <form id="register-form" action="#">
+                <div class="title">
+                    <span>Account</span>
+                    <div class="row"></div>
+                </div>
+                <div class="account">
+                    <div class="sub-title">
+                        <div class="container-label" id="fn">
+                            <label for="fname">First Name
+                                <input type="text" placeholder="Enter First name" name="fname" required>
+                            </label>
+                        </div>
+
+                        <div class="container-label" id="ln">
+                            <label for="lname">Last Name
+                                <input type="text" placeholder="Enter Last name" name="lname" required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="container-label">
+                        <label for="email">Email
+                            <input type="email" placeholder="Enter Email" name="email" required>
+                        </label>
+                    </div>
+
+                    <div class="container-label">
+                        <label for="psw">Password
+                            <input type="password" placeholder="Enter Password" name="password" required>
+                        </label>
+                    </div>
+
+                    <div class="container-label">
+                        <label for="psw-repeat">Confirm Password
+                            <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="title">
+                    <span>Phone</span>
+                    <div class="row"></div>
+                </div>
+
+                <div class="account">
+                    <div class="sub-title" id="account-menu">
+                        <div class="container-label" id="fn">
+                            <label for="phone1">Phone 1
+                                <input type="text" placeholder="Enter Phone Number" name="phone1" required>
+                            </label>
+                        </div>
+
+                        <div class="container-label" id="ln">
+                            <label for="phone2">Phone 2 <span id="phone2">(optional)</span>
+                                <input type="text" placeholder="Enter another phone number" name="phone2">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="title">
+                    <span>Adress</span>
+                    <div class="row"></div>
+                </div>
+
+                <div class="account">
+                    <div class="container-label" id="fn">
+                        <label for="cep">Postal Code
+                            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                                placeholder="Enter postal code" onblur="pesquisacep(this.value);" />
+                        </label>
+                    </div>
+
+                    <div class="container-label">
+                        <label for="rua">Street
+                            <input name="rua" type="text" id="rua" size="60" placeholder="Enter street" />
+                        </label>
+                    </div>
+
+                    <div class="container-label">
+                        <label for="bairro">Neighborhood
+                            <input name="bairro" type="text" id="bairro" size="40" placeholder="Enter neighborhood" />
+                        </label>
+                    </div>
+                    <div class="sub-title">
+                        <div class="container-label" id="fn">
+                            <label for="city">City
+                                <input name="cidade" type="text" placeholder="Enter city" id="cidade" size="40" />
+                            </label>
+                        </div>
+
+                        <div class="container-label" id="ln">
+                            <label for="state">State
+                                <input name="uf" type="text" id="uf" size="2" placeholder="State" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="button" id="register">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
