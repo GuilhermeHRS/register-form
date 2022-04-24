@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/_reset.css">
     <link rel="stylesheet" href="./css/register.css">
-
+    <script src="./js/register.js" type="module" defer></script>
     <title>Register form</title>
-    <script src="./js/register.js"></script>
 </head>
 
 <body>
@@ -87,33 +86,33 @@
 
                 <div class="account">
                     <div class="container-label" id="fn">
-                        <label for="cep">Postal Code
+                        <label for="cep">CEP
                             <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                                placeholder="Enter postal code" onblur="pesquisacep(this.value);" />
+                                onkeydown="javascript: fMasc( this, maskCep)" placeholder="Código postal" />
                         </label>
                     </div>
 
                     <div class="container-label">
-                        <label for="rua">Street
-                            <input name="rua" type="text" id="rua" size="60" placeholder="Enter street" />
+                        <label for="rua">Rua
+                            <input name="rua" type="text" id="rua" size="60" placeholder="Rua" readonly />
                         </label>
                     </div>
 
                     <div class="container-label">
-                        <label for="bairro">Neighborhood
-                            <input name="bairro" type="text" id="bairro" size="40" placeholder="Enter neighborhood" />
+                        <label for="bairro">Bairro
+                            <input name="bairro" type="text" id="bairro" size="40" placeholder="Bairro" readonly />
                         </label>
                     </div>
                     <div class="sub-title">
                         <div class="container-label" id="fn">
-                            <label for="city">City
-                                <input name="cidade" type="text" placeholder="Enter city" id="cidade" size="40" />
+                            <label for="city">Cidade
+                                <input name="cidade" type="text" id="cidade" size="40" placeholder="Cidade" readonly />
                             </label>
                         </div>
 
                         <div class="container-label" id="ln">
-                            <label for="state">State
-                                <input name="uf" type="text" id="uf" size="2" placeholder="State" />
+                            <label for="state">Estado
+                                <input name="uf" type="text" id="uf" size="2" placeholder="Estado" readonly />
                             </label>
                         </div>
                     </div>
@@ -125,7 +124,22 @@
         </div>
     </div>
 
-    <script src="./js/app.js"></script>
+    <script>
+        function fMasc(objeto, mascara) {
+            obj = objeto
+            masc = mascara
+            setTimeout("fMascEx()", 1)
+        }
+        function fMascEx() {
+            obj.value = masc(obj.valuea)
+        }
+        function maskCep(cep) {
+            cep = cep.replace(/\D/g, "")
+            cep = cep.replace(/^(\d{5})(\d)/, "$1-$2")
+
+            return cep
+        }
+    </script>
 </body>
 
 </html>
