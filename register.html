@@ -15,64 +15,64 @@
     <div id="content">
         <div class="container-card">
 
-            <h1>Register form</h1>
+            <h1>Formulário de cadastro</h1>
 
             <form id="register-form" action="#">
                 <div class="title">
-                    <span>Account</span>
+                    <span>Dados da conta</span>
                     <div class="row"></div>
                 </div>
                 <div class="account">
                     <div class="sub-title">
                         <div class="container-label" id="fn">
-                            <label for="fname">First Name
-                                <input type="text" placeholder="Enter First name" name="fname" required>
+                            <label for="fname">Nome
+                                <input type="text" placeholder="Coloque o nome" name="fname" required>
                             </label>
                         </div>
 
                         <div class="container-label" id="ln">
-                            <label for="lname">Last Name
-                                <input type="text" placeholder="Enter Last name" name="lname" required>
+                            <label for="lname">Sobrenome
+                                <input type="text" placeholder="Coloque o sobrenome" name="lname" required>
                             </label>
                         </div>
                     </div>
 
                     <div class="container-label">
                         <label for="email">Email
-                            <input type="email" placeholder="Enter Email" name="email" required>
+                            <input type="email" placeholder="Entre com o seu e-mail" name="email" required>
                         </label>
                     </div>
 
                     <div class="container-label">
-                        <label for="psw">Password
-                            <input type="password" placeholder="Enter Password" name="password" required>
+                        <label for="psw">Senha
+                            <input type="password" placeholder="Senha" name="password" required>
                         </label>
                     </div>
 
                     <div class="container-label">
-                        <label for="psw-repeat">Confirm Password
-                            <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+                        <label for="psw-repeat">Confirme a senha
+                            <input type="password" placeholder="Confirme a senha" name="password-repeat" required>
                         </label>
                     </div>
                 </div>
 
 
                 <div class="title">
-                    <span>Phone</span>
+                    <span>Contato</span>
                     <div class="row"></div>
                 </div>
 
                 <div class="account">
                     <div class="sub-title" id="account-menu">
                         <div class="container-label" id="fn">
-                            <label for="phone1">Phone 1
-                                <input type="text" placeholder="Enter Phone Number" name="phone1" required>
+                            <label for="phone1">Celular
+                                <input type="text" placeholder="Celular principal" name="phone1" required>
                             </label>
                         </div>
 
                         <div class="container-label" id="ln">
-                            <label for="phone2">Phone 2 <span id="phone2">(optional)</span>
-                                <input type="text" placeholder="Enter another phone number" name="phone2">
+                            <label for="phone2">Telefone <span id="phone2">(opcional)</span>
+                                <input type="text" placeholder="Telefone" name="phone2">
                             </label>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
 
 
                 <div class="title">
-                    <span>Adress</span>
+                    <span>Endereço</span>
                     <div class="row"></div>
                 </div>
 
@@ -115,10 +115,18 @@
                                 <input name="uf" type="text" id="uf" size="2" placeholder="Estado" readonly />
                             </label>
                         </div>
+
                     </div>
                 </div>
-                <div class="button" id="register">
-                    <input type="submit" value="Register">
+
+                <div id="container-button">
+                    <div class="button" id="register">
+                        <input type="submit" value="Cadastrar">
+                    </div>
+
+                    <div class="button-back" id="back">
+                        <button href="">Voltar</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -131,7 +139,7 @@
             setTimeout("fMascEx()", 1)
         }
         function fMascEx() {
-            obj.value = masc(obj.valuea)
+            obj.value = masc(obj.value)
         }
         function maskCep(cep) {
             cep = cep.replace(/\D/g, "")
