@@ -6,15 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/_reset.css">
+    <link rel="stylesheet" href="./css/_fonts.css">
+    <link rel="stylesheet" href="./css/_validations.css">
     <link rel="stylesheet" href="./css/register.css">
-    <script src="./js/register.js" type="module" defer></script>
+    <script src="./js/cepValidation.js" type="module" defer></script>
+    <script src="./js/app.js" defer></script>
     <title>Register form</title>
 </head>
 
 <body>
+
     <div id="content">
         <div class="container-card">
-
             <h1>Formulário de cadastro</h1>
 
             <form id="register-form" action="#">
@@ -35,11 +38,12 @@
                                 <input type="text" placeholder="Coloque o sobrenome" name="lname" required>
                             </label>
                         </div>
+                        <p>Os campos "nome" e "sobrenome" não podem conter números</p>
                     </div>
 
                     <div class="container-label">
                         <label for="email">Email
-                            <input type="email" placeholder="Entre com o seu e-mail" name="email" required>
+                            <input id="email" type="email" placeholder="Entre com o seu e-mail" name="email" required>
                         </label>
                     </div>
 
@@ -48,12 +52,13 @@
                             <input type="password" placeholder="Senha" name="password" required>
                         </label>
                     </div>
-
+                    <p>A senha deve possuir números e caracteres especiais (8-15 dígitos) </p>
                     <div class="container-label">
                         <label for="psw-repeat">Confirme a senha
                             <input type="password" placeholder="Confirme a senha" name="password-repeat" required>
                         </label>
                     </div>
+                    
                 </div>
 
 
@@ -66,7 +71,7 @@
                     <div class="sub-title" id="account-menu">
                         <div class="container-label" id="fn">
                             <label for="phone1">Celular
-                                <input type="text" placeholder="Celular principal" name="phone1" required>
+                                <input type="text" maxlength="13" size="13" placeholder="Celular principal" name="phone1" required>
                             </label>
                         </div>
 
@@ -76,6 +81,7 @@
                             </label>
                         </div>
                     </div>
+                    <p>O campo deve ser preenchido com o DDD (11 digitos)</p>
                 </div>
 
 
@@ -88,7 +94,7 @@
                     <div class="container-label" id="fn">
                         <label for="cep">CEP
                             <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                                onkeydown="javascript: fMasc( this, maskCep)" placeholder="Código postal" />
+                                onkeydown="javascript: fMasc(this, maskCep)" placeholder="Código postal" />
                         </label>
                     </div>
 

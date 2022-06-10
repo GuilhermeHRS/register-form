@@ -1,0 +1,14 @@
+.valid {
+    border: '2px solid #36cc36';
+}
+
+.invalid {
+    border: '2px solid crimson';
+}
+
+p {
+    font-size: 13px;
+    color: crimson;
+    font-weight: bold;
+}
+

@@ -1,15 +1,7 @@
-@font-face {
-    font-family: Poppins;
-    src: url(../fonts/Poppins//Poppins-Regular.ttf);
-}
 
-
-* {
-    font-family: "Poppins";
-}
-
-input {
-    display: block;
+#nav-bar {
+  
+    background-color: none;
 }
 
 #content {
@@ -17,7 +9,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 175vh;
+    min-height: 135vh;
     box-shadow: rgb(196, 194, 194);
 }
 
@@ -29,6 +21,7 @@ input {
     min-height: 500px;
     box-shadow: 0px 2px 23px #00000030;   
     padding: 40px 60px;
+    margin-top: 40px;
 }
 
 .container-card h1 {
@@ -52,7 +45,6 @@ input {
 form span {
     margin-left: 30px;
     font-size: 1.3rem;
-    font-family: poppins;
     font-weight: 700;
 
     background-image: linear-gradient(to right, rgb(22, 13, 32), rgb(49, 92, 128));
@@ -90,7 +82,7 @@ form span {
 
 .container-label input[type="text"], .container-label input[type="password"], .container-label input[type="email"]{
     padding: 8px 5px;
-    border-radius: 2px;
+    border-radius: 3px;
     width: 100%;
     box-sizing: border-box;
     border: solid 0.5px #c1c1c1 ;
@@ -143,18 +135,36 @@ form span {
     padding: 0 25px;
 }
 
-#register input, #back button {
+#register input {
     font-size: 18px;
     width: 100%;
     border: 1px solid rgb(161, 157, 157);
     border-radius: 6px;
-    margin: 15px;
+    margin: 15px 35px;
     background: linear-gradient(to left, #4776e6, #063986);
     color: #fff;
     transition: all 0.3s ease
 }
 
-#register input:hover, #back button:hover {
+#register input:hover{
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right,  #4776e6, #063986);
+    justify-content: center;
+    align-items: center;
+}
+
+#back button {
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid rgb(161, 157, 157);
+    border-radius: 6px;
+    margin: 15px 35px;
+    background: linear-gradient(to left, #4776e6, #063986);
+    color: #fff;
+    transition: all 0.3s ease
+}
+
+#back button:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(to right,  #4776e6, #063986);
     justify-content: center;
